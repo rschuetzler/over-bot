@@ -11,6 +11,14 @@ dependencies:
 - xz=5.0.5=1
 - zlib=1.2.8=3
 - pip:
+  - aiohttp==0.21.6
+  - cffi==1.6.0
+  - chardet==2.3.0
+  - discord.py==0.10.0a0
+  - pycparser==2.14
+  - pynacl==1.0.1
   - requests==2.10.0
+  - six==1.10.0
+  - websockets==3.1
   - ws4py==0.3.5
 
