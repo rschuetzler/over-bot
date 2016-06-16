@@ -6,4 +6,5 @@ from datetime import datetime
 @app.route('/', methods = ['GET'])
 @app.route('/index', methods = ['GET'])
 def index():
-    return "Hello World!"
+    return render_template('index.djhtml',
+                           title = 'Home')
