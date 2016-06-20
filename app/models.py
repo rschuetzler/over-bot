@@ -21,6 +21,7 @@ class Hero(db.Model):
     description = db.Column(db.String(255))
     role = db.Column(db.String(64), index = True) # Defined by game (category)
     specialty = db.Column(db.String(64), index = True)
+    image = db.Column(db.String(128))
     countered_by = db.relationship('Hero',
                                    secondary = counters,
                                    primaryjoin = (counters.c.countered_id == id),
