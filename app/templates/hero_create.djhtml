@@ -13,6 +13,22 @@
 	{% endwith %}
 	<form action="" method="post" name="hero_create">
 		{{ form.hidden_tag() }}
+		{% for error in form.name.errors %}
+			<span style="color: red;">[{{ error }}]</span>
+		{% endfor %}<br>
+		{% for error in form.description.errors %}
+			<span style="color: red;">[{{ error }}]</span>
+		{% endfor %}<br>
+		{% for error in form.image.errors %}
+			<span style="color: red;">[{{ error }}]</span>
+		{% endfor %}<br>
+		{% for error in form.role.errors %}
+			<span style="color: red;">[{{ error }}]</span>
+		{% endfor %}<br>
+		{% for error in form.specialty.errors %}
+			<span style="color: red;">[{{ error }}]</span>
+		{% endfor %}<br>
+				
 		<table>
 			<tr>
 				<td>Name:</td><td>{{ form.name(size=15) }}</td>

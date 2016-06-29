@@ -9,6 +9,8 @@ class HeroCreateForm(Form):
     role = SelectField('role', choices=[('offense', 'Offense'), ('defense', 'Defense'),
                                        ('tank', 'Tank'), ('support', 'Support')],
                       validators = [DataRequired()])
-    specialty = RadioField('specialty', choices=[('flanker', 'Flanker'),
+    specialty = RadioField('specialty', choices=[('none', 'None'),
+                                                 ('flanker', 'Flanker'),
                                                  ('sniper', 'Sniper'),
-                                                 ('builder', 'Builder')])
+                                                 ('builder', 'Builder')],
+                           default = 'none')
